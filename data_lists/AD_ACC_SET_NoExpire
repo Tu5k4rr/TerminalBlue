@@ -1,0 +1,11 @@
+<#
+  Version:1.0
+  Author:@Tu5K4rr
+  Purpose:Create list for accounts on Active Directory whos passwords set to never exprire. Looking for non service accounts.
+  Usage: non-service accounts for password to never expire.
+  Note: Account audit
+  Test Platform: Win Server 2008 R2
+#>
+Get-ADuser -filter * -properties SamAccountName, PasswordNeverExpires | 
+where { $_.passwordNeverExpires -eq "true" } | where {$_.enabled -eq "true"} | 
+Format-Table -Property SamAccountName, PasswordNeverExpires -AutoSize > AD_ACC_SET_NoExpire.txt
