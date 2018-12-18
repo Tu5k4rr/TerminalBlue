@@ -1,0 +1,7 @@
+Docs: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/invoke-wmimethod?view=powershell-5.1
+Default path WMI writes to disk with remote host: C:\windows\system32\spool\drivers\x64\3
+
+Examples to execute commands on remote host: Execute powershell download and write to disk. 
+Invoke-WmiMethod -ComputerName hostname1 -Class Win32_Process -Name Create -Argumentlist "powershell -c wget https://google.com -Outfile ChickenNuggets.txt"
+
+Further examples to be added.
