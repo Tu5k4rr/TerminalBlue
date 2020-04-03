@@ -15,7 +15,7 @@ $response = $null
 $AzureAdCred = Get-Credential
 Connect-AzureAD -Credential $AzureAdCred
 Connect-AzAccount -Credential $AzureAdCred
-Connect-SPOService -Url https://flybe-admin.sharepoint.com -Credential $AzureAdCred
+Connect-SPOService -Url https://<sub>.sharepoint.com -Credential $AzureAdCred
 
 #userprompt
 $uname = Read-Host -Prompt 'Enter AD Username Playa!!'
